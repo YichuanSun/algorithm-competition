@@ -1,7 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <memory.h>
-#define N 10003
+#define N 100005
 using namespace std;
 int flag[N],box[N];
 int main()	{
@@ -12,22 +12,20 @@ int main()	{
 	for (int i=0;i<m;i++)	{
 		scanf("%d%d",&l,&r);
 		if (flag[l])	{
-			if (box[l]>=2)	{
-				if (!flag[r])	{
+			box[l]--;
+			box[r]++;
+			if (box[l])	{
+				if (flag[r]==0)	{
 					flag[r]=1;
 					cnt++;
 				}
-				box[l]--;
-				box[r]++;
 			}
-			else if (box[l]<2){
-				box[l]--;
-				box[r]++;
-				if (box[l]==0&&flag[r]==1)	{
+			else	{		//left里面没球了
+				if (flag[r]==1)
 					cnt--;
-				}
+				flag[l]=0; 
 				flag[r]=1;
-				flag[l]=0;	
+				
 			}
 		}
 		else {
