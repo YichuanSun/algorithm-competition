@@ -5,12 +5,12 @@
 #define N 100005
 #define inf 0x3f3f3f3f
 using namespace std;
-int loc[N];
-int res[N];
+int loc[N];		//面值序列
+int res[N];		//面值对应的钞票数
 int v, n, mins ;
-bool dfs(int cur,int now,int dep){
-    //cout<<cur<<endl;
-    if(now==n&&cur)return false;
+bool dfs(int cur,int now,int dep){//cur剩余钱数
+    //cout<<cur<<endl;				//now现在进行到的面值编号
+    if(now==n&&cur)return false;	//dep使用过的钱的张数
     if(dep+cur/loc[now]>mins)return false;
     if(cur%loc[now]==0){
        // cout<<loc[now]<<endl;
