@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1530002556 source:d:\code resourse\algorithm competition\哈理工教程\动态规划\hdu1257\main.cpp
+	<iostream>
+	<algorithm>
+	<stdbool.h>
+
