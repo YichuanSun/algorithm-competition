@@ -2,13 +2,13 @@
 #define N 105
 using namespace std;
 int n,W,dp[N][N],v[N],w[N];
-/*
-int solve(int i,int j)  {
+
+int orisolve(int i,int j)  {
     if (i==n)   return dp[i][j]=0;
     else if (j<w[i]) return dp[i][j]=solve(i+1,j);
     else dp[i][j]=max(solve(i+1,j),solve(i+1,j-w[i])+v[i]);
 }
-*/
+
 int rec(int i,int j)    {
     if (dp[i][j]>=0)    return dp[i][j];
     int res;
