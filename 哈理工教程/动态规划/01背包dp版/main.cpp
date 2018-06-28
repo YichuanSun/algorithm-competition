@@ -29,7 +29,7 @@ void solve()    {
 int main()  {
     cin>>n;
     for (int i=0;i<n;i++)   cin>>w[i];
-    for (int i=0;i<n;i++) cin>>v[i];
+    for (int i=0;i<n;i++)   cin>>v[i];
     cin>>W;
     memset(dp,-1,sizeof(dp));
     cout<<rec(0,W)<<endl;
